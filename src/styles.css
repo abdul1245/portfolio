@@ -417,8 +417,9 @@ h3 {
 .hero-system {
   position: relative;
   z-index: 1;
-  align-self: stretch;
-  min-height: 382px;
+  align-self: center;
+  width: min(100%, 460px);
+  justify-self: end;
   animation: systemFloat 5600ms ease-in-out infinite;
 }
 
@@ -457,10 +458,9 @@ h3 {
   grid-template-columns: 1fr;
   gap: 14px;
   align-content: start;
-  min-height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  padding: 64px 18px 18px;
+  padding: 58px 16px 16px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)),
     rgba(255, 255, 255, 0.035);
@@ -485,7 +485,7 @@ h3 {
   top: -30%;
   height: 120px;
   background: linear-gradient(180deg, transparent, rgba(168, 240, 223, 0.14), transparent);
-  animation: scanSweep 5400ms ease-in-out infinite;
+  animation: scanSweep 4600ms ease-in-out infinite;
   content: "";
 }
 
@@ -622,7 +622,7 @@ h3 {
 
   72%,
   100% {
-    transform: translateY(560px);
+    transform: translateY(330px);
     opacity: 0;
   }
 }
@@ -1231,7 +1231,8 @@ h3 {
   }
 
   .hero-system {
-    min-height: 460px;
+    width: min(100%, 560px);
+    justify-self: start;
   }
 
   .hero-stats {
@@ -1313,7 +1314,6 @@ h3 {
   }
 
   .hero-system {
-    min-height: auto;
     animation: none;
   }
 
