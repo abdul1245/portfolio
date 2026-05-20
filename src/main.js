@@ -19,6 +19,27 @@ navLinks.forEach((link) => {
   });
 });
 
+const caseStudyToggles = document.querySelectorAll('[data-case-study-toggle]');
+
+caseStudyToggles.forEach((button) => {
+  const targetId = button.getAttribute('aria-controls');
+  const caseStudy = targetId ? document.getElementById(targetId) : null;
+  const label = button.querySelector('[data-toggle-label]');
+
+  if (!caseStudy || !label) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    const nextState = !isOpen;
+
+    button.setAttribute('aria-expanded', String(nextState));
+    label.textContent = nextState ? 'Show less' : 'Read case study';
+    caseStudy.hidden = !nextState;
+  });
+});
+
 const revealItems = document.querySelectorAll('.section, .hero-stats, .project-card');
 
 const observer = new IntersectionObserver(
