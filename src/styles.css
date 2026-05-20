@@ -697,18 +697,6 @@ h3 {
   align-items: stretch;
 }
 
-.profile-work-grid::before {
-  position: absolute;
-  top: 38px;
-  right: 0;
-  left: 0;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(14, 143, 120, 0.95), rgba(238, 108, 77, 0.9), rgba(201, 146, 34, 0.85));
-  transform: scaleX(0.92);
-  transform-origin: left;
-  content: "";
-}
-
 .profile-panel,
 .experience-panel {
   position: relative;
@@ -821,10 +809,6 @@ h3 {
   transform: translateY(-4px);
 }
 
-.reveal-ready .profile-work-section.is-visible .profile-work-grid::before {
-  animation: lineGrow 760ms ease both;
-}
-
 .reveal-ready .profile-work-section.is-visible .experience-list li {
   animation: itemLift 520ms ease both;
 }
@@ -843,16 +827,6 @@ h3 {
 
 .reveal-ready .profile-work-section.is-visible .experience-list li:nth-child(5) {
   animation-delay: 280ms;
-}
-
-@keyframes lineGrow {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(0.92);
-  }
 }
 
 @keyframes itemLift {
@@ -1237,10 +1211,6 @@ h3 {
 
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .profile-work-grid::before {
-    display: none;
   }
 
   .project-grid {
